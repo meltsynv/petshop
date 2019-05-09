@@ -1,0 +1,6 @@
+.container{
+  background-image: image(C:\xampp\htdocs\Webshop\img\catAndDog.jpg);
+}
+#dog{
+  background-image: image(C:\xampp\htdocs\Webshop\img\dog.jpg);
+}
