@@ -37,7 +37,7 @@
         </form>
       </li>
         <li class="nav-item">
-        <a class="nav-link" href="index.php">Profil</a>
+        <a class="nav-link" href="login.php">Profil</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Cart</a>
