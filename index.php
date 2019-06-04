@@ -12,13 +12,12 @@
   </head>
   <body>
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Petshop</h1>
-      <img  src="img/friends.jpg" width="100%" align-content="stretch" alt="friends">
-    </div>
+  <div class="jumbotron jumbotron-fluid ">
+      <img class="" src="img/friends.jpg" width="100%" align-content="stretch" alt="friends">
+      <div class="ml-3 mt-5 card-img-overlay text-white">
+          <h1 class="display-4"><b>Petshop</b></h1>
+      </div>
   </div>
-
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -96,7 +95,7 @@
           </nav>
 
 
-  <div class="row">
+  <div class="row text-right">
     <div class="d-md-flex justify-content-around w-100 my-md-3 pl-md-3">
       <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="dog">
         <div class="my-3 py-3">
@@ -106,13 +105,13 @@
         </div>
       </div>
 
-    <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="dog">
-        <div class="my-3 py-3">
-            <h2 class="display-5">Cat environment</h2>
-            <img src="img/cat.jpg" alt="cat" height="300px" width="400px">
-            <p class="lead">And an even wittier subheading.</p>
+        <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="dog">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Cat environment</h2>
+                <img src="img/cat.jpg" alt="cat" height="300px" width="400px">
+                <p class="lead">And an even wittier subheading.</p>
+            </div>
         </div>
-    </div>
     </div>
   </div>
     <div class="d-md-flex justify-content-around w-100 my-md-3 pl-md-3">
