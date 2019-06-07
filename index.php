@@ -3,6 +3,9 @@
 
 <div class="container">
     <div class="row text-right">
+        <div class="col">
+            <?php include 'inc/nav-2.php'?>
+        </div>
         <div class="d-md-flex justify-content-around w-100 my-md-3 pl-md-3">
             <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="dog">
                 <div class="my-3 py-3">
