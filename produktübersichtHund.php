@@ -1,77 +1,40 @@
 <?php include 'inc/head.php'?>
 <?php include 'inc/nav.php'?>
+<?php
+include 'inc/config.php';
 
-<img src="img/hundeleine1.jpg " alt="Hundeleine1" width="300" height="240"/>
+$query = 'SELECT * FROM produkte';
+
+$result = mysqli_query($con, $query);
+
+?>
 <div class="container">
     <div class="row">
-        <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2"></div>
-        <div class="col-sm-11 col-md-11 col-lg-10 col-xl-10">
-            <h1 class="firstOnSide">Hunde-Zubehör</h1>
-            <table class="Hunde-Artikel" border="" cellspacing="10" cellpadding="10">
+        <div class="col-12">
+            <table class="table table-striped">
                 <tr>
-                    <td><img src="img/hundeleine1.jpg " alt="Hundeleine1" width="300"
-                             height="240"/></td>
-                    <td>Leine1<br>5.99 €</td>
-                    <td>Verfügbar:<br>Ja / Nein</td>
-                    <td>
-                        <button class="btn"><i class="fa fa-shopping-cart"></i></button>
-                    </td>
-                    <td>Bwertunngen</td>
+                    <th scope="col">Name</th>
+                    <th scope="col">Preis</th>
+                    <th scope="col">Stück</th>
+                    <th scope="col">Bild</th>
+                    <th scope="col">Beschreibung</th>
                 </tr>
+                <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $name = $row['Name'];
+                        $preis = $row['Preis'];
+                        $stueck = $row['Stueck'];
+                        $bild = $row['Bild'];
+                        $beschreibung = $row['Beschreibung'];
+                ?>
                 <tr>
-                    <td>Bild</td>
-                    <td>Leine2<br>5.99 €</td>
-                    <td>Verfügbar:<br>Ja / Nein</td>
-                    <td>
-                        <button class="btn"><i class="fa fa-shopping-cart"></i></button>
-                    </td>
-                    <td>Bwertunngen</td>
+                    <td><?php echo $name ?></td>
+                    <td><?php echo $preis ?></td>
+                    <td><?php echo $stueck ?></td>
+                    <td><img src="<?php echo $bild ?>"></td>
+                    <td><?php echo $beschreibung ?></td>
                 </tr>
-                <tr>
-                    <td>Bild</td>
-                    <td>Geschirr<br>5.99 €</td>
-                    <td>Verfügbar:<br>Ja / Nein</td>
-                    <td>
-                        <button class="btn"><i class="fa fa-shopping-cart"></i></button>
-                    </td>
-                    <td>Bwertunngen</td>
-                </tr>
-                <tr>
-                    <td>Bild</td>
-                    <td>Napf<br>5.99 €</td>
-                    <td>Verfügbar:<br>Ja / Nein</td>
-                    <td>
-                        <button class="btn"><i class="fa fa-shopping-cart"></i></button>
-                    </td>
-                    <td>Bwertunngen</td>
-                </tr>
-                <tr>
-                    <td>Bild</td>
-                    <td>Leckerchen<br>5.99 €</td>
-                    <td>Verfügbar:<br>Ja / Nein</td>
-                    <td>
-                        <button class="btn"><i class="fa fa-shopping-cart"></i></button>
-                    </td>
-                    <td>Bwertunngen</td>
-                </tr>
-                <tr>
-                    <td>Bild</td>
-                    <td>SPielzeug<br>5.99 €</td>
-                    <td>Verfügbar:<br>Ja / Nein</td>
-                    <td>
-                        <button class="btn"><i class="fa fa-shopping-cart"></i></button>
-                    </td>
-                    <td>Bwertunngen</td>
-                </tr>
-                <tr>
-                    <td>Bild</td>
-                    <td>Halsband<br>5.99 €</td>
-                    <td>Verfügbar:<br>Ja / Nein</td>
-                    <td>
-                        <button class="btn"><i class="fa fa-shopping-cart"></i></button>
-                    </td>
-                    <td>Bwertunngen</td>
-                </tr>
+                    <?php } ?>
             </table>
         </div>
     </div>

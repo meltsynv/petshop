@@ -1,6 +1,8 @@
 <?php include 'inc/head.php'?>
 <?php include 'inc/nav.php'?>
 
+<?php include 'inc/config.php'?>
+
 <div class="container">
     <div class="row text-right">
         <div class="col">
