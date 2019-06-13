@@ -1,15 +1,15 @@
 <?php
 include '../inc/config.php';
 
-if (isset($_POST['ArtikelHinzufügen'])){
+if (isset($_POST['ArtikelHinzufuegen'])){
     $picture = $_POST['Bild'];
     $articlename = $_POST['Name'];
     $price = $_POST['Preis'];
     $description = $_POST['Beschreibung'];
-    $availability = $_POST['Verfügbarkeit'];
+    $availability = $_POST['Verfuegbarkeit'];
     $rating = $_POST['Bewertung'];
 
-    $query  = "INSERT INTO `user` (Bild, Name, Peis, Beschreibung, Verfügbarkeit, Bewertung) VALUES ('$picture', '$articlename', '$price', '$description', '$availability', '$rating')";
+    $query  = "INSERT INTO `artikel` (Bild, Name, Peis, Beschreibung, Verfuegbarkeit, Bewertung) VALUES ('$picture', '$articlename', '$price', '$description', '$availability', '$rating')";
     $result = mysqli_query($con, $query);
 
     header("location:../index.php");

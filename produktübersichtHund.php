@@ -3,7 +3,7 @@
 <?php
 include 'inc/config.php';
 
-$query = 'SELECT * FROM produkte';
+$query = 'SELECT * FROM artikel';
 
 $result = mysqli_query($con, $query);
 
