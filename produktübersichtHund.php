@@ -23,7 +23,7 @@ $result = mysqli_query($con, $query);
                 <?php
                     while ($row = mysqli_fetch_assoc($result)) {
                         $bild = $row['Bild'];
-                        $name = $row['Name'];
+                        $articlename = $row['ArtikelName'];
                         $preis = $row['Preis'];
                         $beschreibung = $row['Beschreibung'];
                         $verfuegbarkeit = $row['Verfuegbarkeit'];
@@ -31,7 +31,7 @@ $result = mysqli_query($con, $query);
                 ?>
                 <tr>
                     <td><img src="<?php echo $bild ?>"></td>
-                    <td><?php echo $name ?></td>
+                    <td><?php echo $articlename ?></td>
                     <td><?php echo $preis ?></td>
                     <td><?php echo $beschreibung ?></td>
                     <td><?php echo $verfuegbarkeit ?></td>

@@ -1,7 +1,7 @@
 <?php include 'inc/head.php'?>
     <div class="container">
         <form class="needs-validation" novalidate action="php/insertArtikel.php" method="post">
-        <!--    <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3">
                 <label for="validationArtikel01">Bild</label>
                 <input type="file" class="form-control" id="validationArtikel01" name="Bild" placeholder="Bild" required>
                 <div class="valid-feedback">
@@ -10,7 +10,7 @@
                 <div class="invalid-feedback">
                     Fügen Sie bitte ein Bild ein.
                 </div>
-            </div>-->
+            </div>
             <div class="col-md-4 mb-3">
                 <label for="validationArtikel02">Name</label>
                 <input type="text" class="form-control" id="validationArtikel02" name="ArtikelName" placeholder="Name" required>

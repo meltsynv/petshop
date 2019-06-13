@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa1e62d-5b0a-469e-bef5-8d7acbc9c44a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminProduktübersicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminProduktübersicht.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artikelHinzufügen.php" beforeDir="false" afterPath="$PROJECT_DIR$/artikelHinzufügen.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/insertArtikel.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/insertArtikel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/produktübersichtHund.php" beforeDir="false" afterPath="$PROJECT_DIR$/produktübersichtHund.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +21,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="29" column="71" lean-forward="true" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/insertUser.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -27,10 +40,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/produktübersichtHund.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="323">
+              <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -38,8 +60,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminProduktübersicht.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+            <state relative-caret-position="260">
+              <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -47,17 +69,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/artikelHinzufügen.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="55" column="68" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="68" />
+            <state relative-caret-position="-102">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/insertArtikel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="107" selection-start-line="11" selection-start-column="107" selection-end-line="11" selection-end-column="107" />
+            <state relative-caret-position="340">
+              <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -76,24 +98,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="277">
               <caret line="48" column="11" lean-forward="true" selection-end-line="71" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/produktübersichtKatze.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/produktübersichtKaninchen.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -119,10 +123,10 @@
         <option value="$PROJECT_DIR$/produktübersichtKaninchen.php" />
         <option value="$PROJECT_DIR$/eigeneBewertungen.php" />
         <option value="$PROJECT_DIR$/eigeneEinkäufe.php" />
-        <option value="$PROJECT_DIR$/adminProduktübersicht.php" />
-        <option value="$PROJECT_DIR$/produktübersichtHund.php" />
-        <option value="$PROJECT_DIR$/artikelHinzufügen.php" />
         <option value="$PROJECT_DIR$/php/insertArtikel.php" />
+        <option value="$PROJECT_DIR$/artikelHinzufügen.php" />
+        <option value="$PROJECT_DIR$/produktübersichtHund.php" />
+        <option value="$PROJECT_DIR$/adminProduktübersicht.php" />
       </list>
     </option>
   </component>
@@ -207,7 +211,7 @@
       <workItem from="1557408639501" duration="314000" />
       <workItem from="1559889025281" duration="9031000" />
       <workItem from="1560340937000" duration="2895000" />
-      <workItem from="1560345494790" duration="6674000" />
+      <workItem from="1560345494790" duration="8263000" />
     </task>
     <task id="LOCAL-00001" summary="test von Lisa">
       <created>1557408196610</created>
@@ -265,11 +269,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560410467481</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="datenbank artikel hinzufügen datenbank füllt sich nicht">
+      <created>1560410946995</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1560410946995</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19407000" />
+    <option name="totallyTimeSpent" value="20996000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -337,20 +348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inc/config.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -399,13 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/produktübersichtHund.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/insertUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -413,24 +403,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adminProduktübersicht.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="18" column="57" lean-forward="true" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/artikelHinzufügen.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="55" column="68" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="68" />
+        <state relative-caret-position="-102">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/insertArtikel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="107" selection-start-line="11" selection-start-column="107" selection-end-line="11" selection-end-column="107" />
+        <state relative-caret-position="340">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/produktübersichtHund.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/adminProduktübersicht.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="71" lean-forward="true" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="71" />
         </state>
       </provider>
     </entry>
