@@ -9,7 +9,7 @@ if (isset($_POST['ArtikelHinzufuegen'])){
     $availability = $_POST['Verfuegbarkeit'];
     $rating = $_POST['Bewertung'];
 
-    $query  = "INSERT INTO `artikel` (Bild, ArtikelName, Peis, Beschreibung, Verfuegbarkeit, Bewertung) VALUES ('$picture', '$articlename', '$price', '$description', '$availability', '$rating')";
+    $query  = "INSERT INTO `artikel` ( ArtikelName, Peis, Beschreibung, Verfuegbarkeit, Bewertung) VALUES ( '$articlename', '$price', '$description', '$availability', '$rating')";
     $result = mysqli_query($con, $query);
 
     header("location:../index.php");
