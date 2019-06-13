@@ -13,26 +13,29 @@ $result = mysqli_query($con, $query);
         <div class="col-12">
             <table class="table table-striped">
                 <tr>
+                    <th scope="col">Bild</th>
                     <th scope="col">Name</th>
                     <th scope="col">Preis</th>
-                    <th scope="col">Stück</th>
-                    <th scope="col">Bild</th>
                     <th scope="col">Beschreibung</th>
+                    <th scope="col">Verfügbarkeit</th>
+                    <th scope="col">Bewertung</th>
                 </tr>
                 <?php
                     while ($row = mysqli_fetch_assoc($result)) {
+                        $bild = $row['Bild'];
                         $name = $row['Name'];
                         $preis = $row['Preis'];
-                        $stueck = $row['Stueck'];
-                        $bild = $row['Bild'];
                         $beschreibung = $row['Beschreibung'];
+                        $verfuegbarkeit = $row['Verfuegbarkeit'];
+                        $bewertung= $row['Bewertung'];
                 ?>
                 <tr>
+                    <td><img src="<?php echo $bild ?>"></td>
                     <td><?php echo $name ?></td>
                     <td><?php echo $preis ?></td>
-                    <td><?php echo $stueck ?></td>
-                    <td><img src="<?php echo $bild ?>"></td>
                     <td><?php echo $beschreibung ?></td>
+                    <td><?php echo $verfuegbarkeit ?></td>
+                    <td><?php echo $bewertung ?></td>
                 </tr>
                     <?php } ?>
             </table>
