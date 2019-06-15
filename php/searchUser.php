@@ -2,9 +2,11 @@
 include "../inc/config.php";
 if (isset($_POST['searchBtn'])){
     $input = $_POST['searchLabel'];
-    $query = "SELECT * FROM user WHERE Vorname LIKE '%$input%'";
+    $query = "SELECT * FROM user WHERE Vorname LIKE '%$input%' OR Nachname LIKE '%$input%'";
     $result  = mysqli_query($con, $query);
     ?>
+
+
     <div class="container">
         <div class="row">
             <div class="col-12">
