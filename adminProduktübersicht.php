@@ -3,15 +3,16 @@
 <?php
 include 'inc/config.php';
 
-$query = 'SELECT * FROM artikel';
+$query = 'SELECT * FROM produkte';
 
 $result = mysqli_query($con, $query);
 
 ?>
     <div class="container">
+        <input type="text" name="search" id="search" class="form-control" placeholder="Nach Artikel suchen..."/>
         <div class="row">
             <div class="col-12">
-                <table class="table table-striped">
+                <table class="table table-striped" id="uebersicht">
                     <tr>
                         <th scope="col">Bild</th>
                         <th scope="col">Name</th>
@@ -24,19 +25,19 @@ $result = mysqli_query($con, $query);
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {
                         $bild = $row['Bild'];
-                        $articlename = $row['ArtikelName'];
+                        $articlename = $row['Name'];
                         $preis = $row['Preis'];
                         $beschreibung = $row['Beschreibung'];
-                        $verfuegbarkeit = $row['Verfuegbarkeit'];
-                        $bewertung= $row['Bewertung'];
+                        $verfuegbarkeit = $row['Stueck'];
+                        //$bewertung= $row['Bewertung'];
                         ?>
                         <tr>
-                            <td><img src="<?php echo $bild ?>"></td>
+                            <td><img src="<?php echo $bild ?>" width="200"></td>
                             <td><?php echo $articlename ?></td>
                             <td><?php echo $preis ?></td>
                             <td><?php echo $beschreibung ?></td>
                             <td><?php echo $verfuegbarkeit ?></td>
-                            <td><?php echo $bewertung ?></td>
+                            <td><?php //echo $bewertung ?></td>
                             <td> <button type="button" id="bearbeiten">bearbeiten</button></td>
                         </tr>
                     <?php } ?>
@@ -45,5 +46,29 @@ $result = mysqli_query($con, $query);
         </div>
         <button type="button" id="NeuArtikel">Neuen Artikel hinzufügen</button>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#search').keyup(function () {
+                search_table($(this).val());
+            });
+
+            function search_table(value) {
+                $('#uebersicht tr').each(function () {
+                    var found = 'false';
+                    $(this).each(function () {
+                        if ($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+                            found = 'true';
+                        }
+                    });
+                    if (found == 'true') {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            }
+        });
+    </script>
 
 <?php include 'inc/bottom.php'?>

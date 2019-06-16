@@ -5,8 +5,6 @@ if (isset($_POST['searchBtn'])){
     $query = "SELECT * FROM user WHERE Vorname LIKE '%$input%' OR Nachname LIKE '%$input%'";
     $result  = mysqli_query($con, $query);
     ?>
-
-
     <div class="container">
         <div class="row">
             <div class="col-12">
