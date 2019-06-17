@@ -3,7 +3,7 @@
 <?php
 include 'inc/config.php';
 
-$query = 'SELECT * FROM artikel';
+$query = 'SELECT * FROM produkte';
 
 $result = mysqli_query($con, $query);
 
@@ -22,20 +22,21 @@ $result = mysqli_query($con, $query);
                 </tr>
                 <?php
                     while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row['ID'];
                         $bild = $row['Bild'];
-                        $articlename = $row['ArtikelName'];
+                        $articlename = $row['Name'];
                         $preis = $row['Preis'];
                         $beschreibung = $row['Beschreibung'];
-                        $verfuegbarkeit = $row['Verfuegbarkeit'];
-                        $bewertung= $row['Bewertung'];
+                        $verfuegbarkeit = $row['Stueck'];
+
                 ?>
                 <tr>
-                    <td><img src="<?php echo $bild ?>"></td>
+                    <td><img src="<?php echo $bild ?>"width="200"></td>
                     <td><?php echo $articlename ?></td>
                     <td><?php echo $preis ?></td>
                     <td><?php echo $beschreibung ?></td>
                     <td><?php echo $verfuegbarkeit ?></td>
-                    <td><?php echo $bewertung ?></td>
+                    <td><form method="post" action="produktansicht.php?ID=<?php echo $id ?>"><button type="submit" name="showBtn">anzeigen</button></form></td>
                 </tr>
                     <?php } ?>
             </table>

@@ -15,13 +15,13 @@
                 </form>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="produktansicht.php">Produktansicht</a>
+                <a class="nav-link" href="produktübersichtHund.php">Produktübersicht</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
+                <a class="nav-link" href="#">Einkaufswagen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" href="#">Profil</a>
             </li>
         </ul>
     </div>
