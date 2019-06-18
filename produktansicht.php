@@ -4,7 +4,7 @@ include 'inc/config.php';
 
 if (isset($_POST['showBtn'])){
     $id = $_GET['ID'];
-    $query = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = '$id' AND produkte.ID = '$id'";
+    $query = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = '$id' AND bewertungen.ID = '$id'";
 
     $result = mysqli_query($con, $query);
 

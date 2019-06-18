@@ -1,11 +1,11 @@
 <?php
 include '../inc/config.php';
 
-if (isset($_POST['ArtikelLoeschen'])){
+if (isset($_POST['NutzerLoeschen'])){
+    $username = $_GET['Username'];
 
-
-    $loesch = mysqli_query($con, "DELETE FROM user WHERE ID = '4'");
-    header("location:../adminNutzerliste.php");
+    $loesch = mysqli_query($con, "DELETE FROM user WHERE Username = '$username'");
+    header("location:../adminIndex.php");
 }
 else{
     echo "fail";

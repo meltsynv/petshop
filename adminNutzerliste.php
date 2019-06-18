@@ -23,6 +23,7 @@ $result = mysqli_query($con, $query);
                     </tr>
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {
+                        $username = $row['Username'];
                         $vorname = $row['Vorname'];
                         $nachname = $row['Nachname'];
                         $email = $row['Email'];
@@ -31,13 +32,12 @@ $result = mysqli_query($con, $query);
                             <td><?php echo $vorname ?></td>
                             <td><?php echo $nachname ?></td>
                             <td><?php echo $email ?></td>
-                            <td> <button type="button" id="bearbeiten">bearbeiten</button></td>
+                            <td><form method="post" action="php/removeUser.php?Username=<?php echo $username ?>"><button type="submit" name="NutzerLoeschen">löschen</button></form></td>
                         </tr>
                     <?php } ?>
                 </table>
             </div>
         </div>
-        <button type="button" id="NeueNutzer">Neue Nutzer hinzufügen</button>
     </div>
 
 
