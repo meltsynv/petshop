@@ -9,7 +9,7 @@ if (isset($_POST['loginBtn'])){
     $result = mysqli_query($con, $query);
     while($row = mysqli_fetch_array($result)) {
         if ($password == $row[4] && $row[2] == $email){
-            header("location:../index.php");
+            header("location:../index.php?Username=$row[3]");
         }
         else{
             echo "Bitte geben Sie die korrekten Zugangsdaten ein.";

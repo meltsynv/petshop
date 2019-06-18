@@ -12,8 +12,6 @@ $con = mysqli_connect (MYSQL_HOST, MYSQL_BENUTZER, MYSQL_KENNWORT, MYSQL_DATENBA
 if ($con){
     //echo 'Verbindung erfolgreich: ';
 }else{
-    // hier sollte dann später dem Programmierer eine
-    // E-Mail mit dem Problem zukommen gelassen werden
     die('keine Verbindung möglich: ' . mysqli_error());
 }
 
