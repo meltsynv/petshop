@@ -2,17 +2,17 @@
 include '../inc/config.php';
 
 if (isset($_POST['ArtikelHinzufuegen'])){
-    $picture = $_POST['Bild'];
-    $articlename = $_POST['ArtikelName'];
+    $articlename = $_POST['Name'];
     $price = $_POST['Preis'];
+    $availability = $_POST['Stueck'];
+    $picture = $_POST['Bild'];
     $description = $_POST['Beschreibung'];
-    $availability = $_POST['Verfuegbarkeit'];
-    $rating = $_POST['Bewertung'];
 
-    $query  = "INSERT INTO `artikel` (Bild ,ArtikelName, Preis, Beschreibung, Verfuegbarkeit, Bewertung) VALUES ('$picture', '$articlename', '$price', '$description', '$availability', '$rating')";
+
+    $query  = "INSERT INTO `produkte` (Name, Preis, Stueck, Bild, Beschreibung) VALUES ( '$articlename', '$price','$availability','$picture', '$description' )";
     $result = mysqli_query($con, $query);
 
-    header("location:../index.php");
+    header("location:../adminProduktübersicht.php");
 }
 else{
     echo "fail";

@@ -2,18 +2,8 @@
     <div class="container">
         <form class="needs-validation" novalidate action="php/insertArtikel.php" method="post">
             <div class="col-md-4 mb-3">
-                <label for="validationArtikel01">Bild</label>
-                <input type="file" class="form-control" id="validationArtikel01" name="Bild" placeholder="Bild" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-                <div class="invalid-feedback">
-                    Fügen Sie bitte ein Bild ein.
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
                 <label for="validationArtikel02">Name</label>
-                <input type="text" class="form-control" id="validationArtikel02" name="ArtikelName" placeholder="Name" required>
+                <input type="text" class="form-control" id="validationArtikel02" name="Name" placeholder="Name" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -28,28 +18,30 @@
                     Geben Sie bitte den Preis des Artikels ein.
                 </div>
             </div>
+
+            <div class="col-md-3 mb-3">
+                <label for="validationArtikel05">Verfügbarkeit</label>
+                <input type="number" class="form-control" id="validationArtikel05" name="Stueck" placeholder="Verfügbarkeit" required>
+                <div class="invalid-feedback">
+                    Geben Sie bitte die Verfügbarkeit ein.
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="validationArtikel01">Bild</label>
+                <input type="file" class="form-control" id="validationArtikel01" name="Bild" placeholder="Bild" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Fügen Sie bitte ein Bild ein.
+                </div>
+            </div>
             <div class="col-md-4 mb-3">
                 <label for="validationArtikel04">Beschreibung</label>
                 <div class="input-group">
                     <input type="text" class="form-control" id="validationArtikel04" name="Beschreibung" placeholder="Beschreibung" required>
                     <div class="invalid-feedback">
                         Geben Sie bitte eine Beschreibung ein.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="validationArtikel05">Verfügbarkeit</label>
-                <input type="number" class="form-control" id="validationArtikel05" name="Verfuegbarkeit" placeholder="Verfügbarkeit" required>
-                <div class="invalid-feedback">
-                    Geben Sie bitte die Verfügbarkeit ein.
-                </div>
-            </div>
-            <div class="col-md-4 mb-3">
-                <label for="validationArtikel06">Bewertung</label>
-                <div class="input-group">
-                    <input type="number" class="form-control" id="validationArtikel06" name="Bewertung" placeholder="Bewertung" required>
-                    <div class="invalid-feedback">
-                        Geben Sie bitte eine Bewertung ein.
                     </div>
                 </div>
             </div>
