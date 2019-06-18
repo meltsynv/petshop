@@ -7,12 +7,14 @@ $query = 'SELECT * FROM user';
 $result = mysqli_query($con, $query);
 
 ?>
-
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" id="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
     <div class="container">
-        <input type="text" name="search" id="search" class="form-control" placeholder="Nach Nutzer suchen..."/>
         <div class="row">
             <div class="col-12">
-                <table class="table table-striped" id="overview">
+                <table class="table table-striped">
                     <tr>
                         <th scope="col">Vorname</th>
                         <th scope="col">Nachname</th>
@@ -21,6 +23,7 @@ $result = mysqli_query($con, $query);
                     </tr>
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {
+                        $username = $row['Username'];
                         $vorname = $row['Vorname'];
                         $nachname = $row['Nachname'];
                         $email = $row['Email'];
@@ -29,7 +32,7 @@ $result = mysqli_query($con, $query);
                             <td><?php echo $vorname ?></td>
                             <td><?php echo $nachname ?></td>
                             <td><?php echo $email ?></td>
-                            <td> <button type="button" id="bearbeiten">löschen</button></td>
+                            <td><form method="post" action="php/removeUser.php?Username=<?php echo $username ?>"><button type="submit" name="NutzerLoeschen">löschen</button></form></td>
                         </tr>
                     <?php } ?>
                 </table>
@@ -37,29 +40,6 @@ $result = mysqli_query($con, $query);
         </div>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            $('#search').keyup(function () {
-                search_table($(this).val());
-            });
-
-            function search_table(value) {
-                $('#overview tr').each(function () {
-                    var found = 'false';
-                    $(this).each(function () {
-                        if ($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0) {
-                            found = 'true';
-                        }
-                    });
-                    if (found == 'true') {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            }
-        });
-    </script>
 
 
 <?php include 'inc/bottom.php'?>

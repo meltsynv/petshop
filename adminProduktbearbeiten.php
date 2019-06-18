@@ -1,41 +1,46 @@
 <?php include 'inc/head.php'?>
-<?php include 'inc/nav.php'?>
+<?php include 'inc/nav.php';
+    include 'inc/config.php';
 
-    <div class="d-flex flex-row bd-highlight mb-3">
-        <img src="img/cat-1373903_640.jpg" alt="">
+    if (isset($_POST['updateProdukt'])){
+    $id = $_GET['ID'];
+    $query = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = '$id' AND bewertungen.ID = '$id'";
 
+    $result = mysqli_query($con, $query);
 
-        <div class="d-flex flex-row bd-highlight">
-            <div class="p-2 bd-highlight"><br><h2>Katzeleine</h2><p></div>
-            <div class="p-2 bd-highlight">Flex item 2</div>
-            <div class="p-2 bd-highlight">Flex item 3</div>
-        </div>
-    </div>
+    if ($row = mysqli_fetch_assoc($result)) {
+    $id = $_GET['ID'];
+    $bild = $row['Bild'];
+    $name = $row['Name'];
+    $preis = $row['Preis'];
+    $stueck = $row['Stueck'];
+    $beschreibung = $row['Beschreibung'];
+    ?>
 
-    <form class="needs-validation" novalidate action="php/removeArtikel.php" method="post">
-    <button class="btn btn-primary" name="ArtikelLoeschen" type="submit">Artikel löschen</button>
-    </form>
-    <form class="needs-validation" novalidate action="php/updateVerfügbarkeit.php" method="post">
-        <div class="col-md-4 mb-3">
-            <label for="validationArtikel01">Verfügbarkeit anpassen</label>
-            <input type="number" class="form-control" id="updateVerfügbarkeit" name="VerfuegbarkeitNeu" placeholder="VerfügbarkeitNeu" required>
-            <div class="valid-feedback">
-                Looks good!
+        <div class="d-flex flex-row bd-highlight pl-3 pt-3 mb-3">
+            <img src="<?php echo $bild ?>" alt="" width="400px">
+            <div class="p-2 bd-highlight"><br><h1><?php echo $name ?></h1><br></div>
+            <div class="d-flex flex-row bd-highlight">
+                <div class=" p-2 bd-highlight"><br><h3><?php echo $beschreibung ?></h3><br></div>
+                <div class="p-2 bd-highlight"><br><h3><?php echo $stueck ?> Stück auf Lager</h3><br></div>
+                <div class="p-2 bd-highlight">
+                    <br><h3><?php echo $preis ?>€</h3><p>
+
+                </div>
+
             </div>
         </div>
-        <button class="btn btn-primary" name="updateVerfuegbarkeit" type="submit">OK</button>
-    </form>
+    <form method="post" action="php/removeArtikel.php?ID=<?php echo $id ?>"><button type="submit" name="removeArticle">löschen</button></form>
 
-    <div>
-        <form method = 'post' action = 'messages.php?view=$view' >
-            <b>Kommentar und Bewertung hinterlassen:</b><br><br>
-            Sehr gut<input type = 'radio' name = 'pm' value = '0' checked = 'checked' >
-            Gut<input type = 'radio' name = 'pm' value = '1' >
-            Befriedigend<input type = 'radio' name = 'pm' value = '1' >
-            Ausreichend<input type = 'radio' name = 'pm' value = '1' >
-            Schlecht<input type = 'radio' name = 'pm' value = '1' > <br>
-            <textarea name = 'text' cols = '40' rows = '3' ></textarea ><br>
-            <input type = 'submit' value = 'Abschicken' ></form ><br>
-    </div>
 
-<?php include 'inc/bottom.php'?>
+        <div>
+            <form method = 'post' action = 'php/updateVerfügbarkeit.php?ID=<?php echo $id ?>' >
+                <b>Verfügbarkeit:</b><br><br>
+                <input name="VerfuegbarkeitNeu" type="number" max="6.0" min="1.0" >
+                <input type = 'submit' name = 'updateVerfuegbarkeit' >OK</form ><br>
+        </div>
+
+        <?php
+    }
+
+    } include 'inc/bottom.php'?>
