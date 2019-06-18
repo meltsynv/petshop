@@ -2,7 +2,7 @@
 <?php include 'inc/nav.php';
 include 'inc/config.php';
 
-if (isset($_POST['showBtn'])){
+
     $id = $_GET['ID'];
     $query = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = '$id' AND bewertungen.ID = '$id'";
 
@@ -17,43 +17,53 @@ if (isset($_POST['showBtn'])){
         $beschreibung = $row['Beschreibung'];
         ?>
 
-        <div class="d-flex flex-row bd-highlight pl-3 pt-3 mb-3">
-            <img src="<?php echo $bild ?>" alt="" width="400px">
-            <div class="p-2 bd-highlight"><br><h1><?php echo $name ?></h1><br></div>
-            <div class="d-flex flex-row bd-highlight">
-                <div class=" p-2 bd-highlight"><br><h3><?php echo $beschreibung ?></h3><br></div>
-                <div class="p-2 bd-highlight"><br><h3><?php echo $stueck ?> Stück auf Lager</h3><br></div>
-                <div class="p-2 bd-highlight">
-                    <br><h3><?php echo $preis ?>€</h3><p>
-                        <button type="submit" id="cartBtn">Zum Warenkorb hinzufügen</button>
-                </div>
 
-            </div>
-        </div>
         <div class="container">
             <div class="row">
+                <div class="d-flex flex-row bd-highlight pl-3 pt-3 mb-3">
+                    <div class="row">
+                        <div class="col pr-0 mr-0"><img src="<?php echo $bild ?>" alt="" width="400px"></div>
+                        <div class="col-5 pl-2 mr-0">
+                            <h1><?php echo $name ?></h1><br><br>
+                            <h5><?php echo $beschreibung ?></h5><br>
+                            <h7><?php echo $stueck ?> Stück auf Lager</h7>
+
+                        </div>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <br><h3><?php echo $preis ?>€</h3><p>
+                            <button class="btn btn-outline-success" type="submit" id="cartBtn" >Zum Warenkorb hinzufügen</button>
+                    </div>
+                </div>
                 <div class="col-12">
                     <table class="table table-striped">
-                        <tr>
-
-                        </tr>
+                        <thead><b>Bertungen für diesen Artikel:</b></thead>
+                        <th scope="col">User</th>
+                        <th scope="col">Note</th>
+                        <th scope="col">Kommentar</th>
                         <?php
                         while ($row = mysqli_fetch_assoc($result)) {
+                            $user = $row['User'];
                             $kommentar = $row['Kommentar'];
-                            $note = $row['Note'];
-                        } ?>
+                            $note = $row['Note']; ?>
+                        <tr>
+                            <td><?php echo $user ?></td>
+                            <td><?php echo $note ?></td>
+                            <td><?php echo $kommentar ?></td>
+                        </tr><?php } ?>
                     </table>
                 </div>
             </div>
             <div>
                 <form method = 'post' action = 'php/articleValuations.php?ID=<?php echo $id ?>' >
-                    <b>Kommentar und Bewertung hinterlassen:</b><br><br>
-                    Note: <input name="Note" type="number" max="6.0" min="1.0" >
-                    <textarea name = 'Kommentar' cols = '40' rows = '3' ></textarea ><br>
-                    <input type = 'submit' name = 'commentBtn' ></form ><br>
+                    <b>Eigene Bewertung hinterlassen:</b><br><br>
+                    Schulnote: <input name="Note" type="number" max="6.0" min="1.0" ><br>
+                    <textarea name = 'Kommentar' cols = '40' rows = '3' placeholder="Ihr Kommentar..."></textarea ><br><br>
+                    <button class="btn btn-outline-success" type="submit" id="commentBtn" >Abschicken</button>
+                </form >
             </div>
         </div>
         <?php
-    }
+
 
 } include 'inc/bottom.php'?>

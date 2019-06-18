@@ -1,8 +1,6 @@
 <?php include 'inc/head.php'?>
 <?php include 'inc/nav.php'?>
-
-<?php include 'inc/config.php';
-$username = $_GET['Username'] ?>
+<?php include 'inc/config.php'?>
 
 <div class="container">
     <div class="row text-right">
@@ -11,7 +9,7 @@ $username = $_GET['Username'] ?>
                 <div class="my-3 py-3">
                     <h2 class="display-5">Dog environment</h2>
                     <img src="img/dog.jpg" alt="dog" height="300px" width="400px">
-                    <p class="lead"><form method="post" action="produktübersichtHund.php?Username=<?php echo $username ?>"><button type="submit" name="dog">ansehen</button></form></p>
+                    <p class="lead"><form method="post" action="produktübersichtHund.php"><button type="submit" name="dog">ansehen</button></form></p>
                 </div>
             </div>
             <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden" id="dog">
