@@ -34,7 +34,9 @@ include 'inc/config.php';
                     </div>
                     <div class="p-2 bd-highlight">
                         <br><h3><?php echo $preis ?>€</h3><p>
-                        <form method="post" action="php/buyArticle.php?ID=<?php echo $id ?>&Verfuegbarkeit=<?php echo $stueck ?>"><button type="submit" name="cartBtn">kaufen</button></form>
+                        <form method="post" action="php/buyArticle.php?ID=<?php echo $id ?>&Verfuegbarkeit=<?php echo $stueck ?>">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="cartBtn">kaufen</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-12">
@@ -43,6 +45,7 @@ include 'inc/config.php';
                         <th scope="col">User</th>
                         <th scope="col">Note</th>
                         <th scope="col">Kommentar</th>
+                        <th scope="col"></th>
                         <?php
                         while ($row = mysqli_fetch_assoc($result2)) {
                             $isBought = $row['isBought'];

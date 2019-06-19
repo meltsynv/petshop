@@ -1,4 +1,6 @@
 <?php
+include "../inc/head.php";
+include "../inc/nav.php";
 include "../inc/config.php";
 
 //Überprüfung, ob Button "searchBtn" geklickt wurde
@@ -32,12 +34,14 @@ if (isset($_POST['userSearch'])){
 
                     ?>
                     <tr>
-                        <td><img src="<?php echo $bild ?>"width="200"></td>
+                        <td><img src="../<?php echo $bild ?>"width="200"></td>
                         <td><?php echo $articlename ?></td>
                         <td><?php echo $preis ?></td>
                         <td><?php echo $beschreibung ?></td>
                         <td><?php echo $verfuegbarkeit ?></td>
-                        <td><form method="post" action="produktansicht.php?ID=<?php echo $id ?>"><button type="submit" name="showBtn">anzeigen</button></form></td>
+                        <td><form method="post" action="../produktansicht.php?ID=<?php echo $id ?>">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="showBtn">anzeigen</button>
+                            </form></td>
                     </tr>
                 <?php }} ?>
             </table>
@@ -45,3 +49,5 @@ if (isset($_POST['userSearch'])){
     </div>
 </div>
 
+<?php
+include "../inc/head.php";

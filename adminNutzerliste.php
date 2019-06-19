@@ -32,7 +32,9 @@ $result = mysqli_query($con, $query);
                             <td><?php echo $vorname ?></td>
                             <td><?php echo $nachname ?></td>
                             <td><?php echo $email ?></td>
-                            <td><form method="post" action="php/removeUser.php?Username=<?php echo $username ?>"><button type="submit" name="NutzerLoeschen">löschen</button></form></td>
+                            <td><form method="post" action="php/removeUser.php?Username=<?php echo $username ?>">
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="NutzerLoeschen">löschen</button>
+                                </form></td>
                         </tr>
                     <?php } ?>
                 </table>
