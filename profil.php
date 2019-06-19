@@ -64,9 +64,9 @@ if ($row = mysqli_fetch_assoc($result)) {
                 </tr>
                 <?php
                 //Ausgabe der Ergebnisse, welche der User gekauft hat
-                $query4 = "SELECT * FROM kaeufe INNER JOIN produkte WHERE Username = '$user'";
-                $result4 = mysqli_query($con, $query4);
-                while ($row = mysqli_fetch_assoc($result4)) {
+                $query3 = "SELECT * FROM kaeufe INNER JOIN produkte WHERE kaeufe.Username = '$user' AND kaeufe.ArtikelID = produkte.ID";
+                $result3 = mysqli_query($con, $query3);
+                while ($row = mysqli_fetch_assoc($result3)) {
                     $bild = $row['Bild'];
                     $datum = $row['Datum'];
                     $artikelName = $row['Name'];
