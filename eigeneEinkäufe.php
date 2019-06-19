@@ -1,19 +1,38 @@
-<?php include 'inc/head.php'?>
-<?php include 'inc/nav.php'?>
+<?php
+include "inc/head.php";
+include "inc/nav.php";
+include "inc/config.php";
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2"></div>
-        <div class="col-sm-11 col-md-11 col-lg-10 col-xl-10">
-            <h1 class="firstOnSide">Eigene Käufe</h1>
-            <table class="Eigene-Einkäufe" border="" cellspacing="10" cellpadding="10">
+session_start() ;
+if (isset($_SESSION['Username'])) {
+    $user = $_SESSION['Username'];
+}
+$query1 = "SELECT * FROM kaeufe INNER JOIN produkte WHERE Username = '$user'";
+$result = mysqli_query($con, $query1);
+if ($row = mysqli_fetch_assoc($result)) {
+    $artikelID = $row['ArtikelID'];
+    $datum = $row['Datum'];
+    $price= $row['Preis'];
+
+    ?>
+
+
+<div class="row justify-content-center">
+        <div class="col-10">
+            <table class="table table-striped">
+                <thead><b>Deine Käufe:</b> </thead>
                 <tr>
-                    <td><img src="img/hundeleine1.jpg " alt="Hundeleine1" width="300" height="240"/> </td>
-                    <td>Leine1<br>5.99 €</td>
+                    <th scope="col">Datum</th>
+                    <th scope="col">Produkt ID</th>
+                    <th scope="col">Preis</th>
                 </tr>
+                    <tr>
+                    <td><?php echo $datum ?></td>
+                    <td><?php echo $artikelID ?></td>
+                    <td><?php echo $price ?></td>
+                    </tr><?php } ?>
             </table>
         </div>
     </div>
-</div>
 
 <?php include 'inc/bottom.php'?>
