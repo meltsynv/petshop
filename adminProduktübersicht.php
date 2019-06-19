@@ -19,8 +19,8 @@ $result = mysqli_query($con, $query);
                         <th scope="col">Preis</th>
                         <th scope="col">Beschreibung</th>
                         <th scope="col">Verfügbarkeit</th>
-                        <th scope="col">Bewertung</th>
                         <th scope="col"></th>
+
                     </tr>
                     <?php
                     while ($row = mysqli_fetch_assoc($result)) {

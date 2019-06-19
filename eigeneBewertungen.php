@@ -1,33 +1,42 @@
 <?php include 'inc/head.php'?>
-<?php include 'inc/nav.php'?>
+<?php
+include 'inc/config.php';
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-1 col-md-1 col-lg-2 col-xl-2"></div>
-        <div class="col-sm-11 col-md-11 col-lg-10 col-xl-10">
-            <h1 class="firstOnSide">Eigene Bewertungen</h1>
-            <table class="Eigene-Bewertungen" border="" cellspacing="10" cellpadding="10">
-                <tr>
-                    <td><img src="img/hundeleine1.jpg" alt="Hundeleine1" width="300" height="240"/> </td>
-                    <td>Leine1<br>5.99 €</td>
-                    <td>Bewertung sterne </td>
-                    <td>Bewertung Text </td>
-                </tr>
-                <tr>
-                    <td><img src="img/hundeleine1.jpg" alt="Hundeleine1" width="300" height="240"/> </td>
-                    <td>Leine1<br>5.99 €</td>
-                    <td>Bewertung sterne </td>
-                    <td>Bewertung Text </td>
-                </tr>
-                <tr>
-                    <td><img src="img/hundeleine1.jpg " alt="Hundeleine1" width="300" height="240"/> </td>
-                    <td>Leine1<br>5.99 €</td>
-                    <td>Bewertung sterne </td>
-                    <td>Bewertung Text </td>
-                </tr>
-            </table>
+$query = 'SELECT * FROM bewertungen INNER JOIN produkte WHERE bewertungen.user = $user AND produkte.id = bewertungen.id';
+
+$result = mysqli_query($con, $query);
+
+?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped">
+                    <tr>
+                        <th scope="col">Artikel</th>
+                        <th scope="col">Preis</th>
+                        <th scope="col">Bewertung</th>
+                        <th scope="col">Kommentar</th>
+                    </tr>
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $username = $row['Username'];
+                        $vorname = $row['Vorname'];
+                        $nachname = $row['Nachname'];
+                        $email = $row['Email'];
+                        ?>
+                        <tr>
+                            <td><?php echo $vorname ?></td>
+                            <td><?php echo $nachname ?></td>
+                            <td><?php echo $email ?></td>
+                            <td><form method="post" action="php/removeUser.php?Username=<?php echo $username ?>"><button type="submit" name="NutzerLoeschen">löschen</button></form></td>
+                        </tr>
+                    <?php } ?>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+
+
 
 <?php include 'inc/bottom.php'?>
