@@ -4,7 +4,7 @@
 
     if (isset($_POST['updateProdukt'])){
     $id = $_GET['ID'];
-    $query = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = '$id' AND bewertungen.ID = '$id'";
+    $query = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = '$id'";
 
     $result = mysqli_query($con, $query);
 

@@ -34,7 +34,7 @@ include 'inc/config.php';
                     </div>
                     <div class="p-2 bd-highlight">
                         <br><h3><?php echo $preis ?>€</h3><p>
-                            <button class="btn btn-outline-success" type="submit" id="cartBtn" >Zum Warenkorb hinzufügen</button>
+                        <form method="post" action="php/buyArticle.php?ID=<?php echo $id ?>&Verfuegbarkeit=<?php echo $stueck ?>"><button type="submit" name="cartBtn">kaufen</button></form>
                     </div>
                 </div>
                 <div class="col-12">
