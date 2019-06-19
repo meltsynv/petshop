@@ -1,7 +1,7 @@
 <?php include "inc/head.php"?>
 <div class="d-inline-flex p-2 flex-column align-content-end">
     <div>
-    <form class="form-inline my-2 my-lg-0" method="post" action="php/searchUser.php">
+    <form class="form-inline my-2 my-lg-0" method="post" action="php/searchArticle.php">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" name="searchLabel" id="output" onkeyup="searchq()" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" name="searchBtn" type="submit">Search</button>
     </form>

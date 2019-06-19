@@ -1,6 +1,7 @@
 <?php
 include '../inc/config.php';
 
+//Überprüfung, ob Button "SubmitButton" zum Hinzufügen eines Nutzers geklickt wurden
 if (isset($_POST['SubmitButton'])){
     $forename = $_POST['Vorname'];
     $surname = $_POST['Nachname'];

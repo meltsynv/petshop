@@ -3,8 +3,8 @@
 <?php
 include 'inc/config.php';
 
+//Datenbankabfrage
 $query = "SELECT * FROM produkte";
-
 $result = mysqli_query($con, $query);
 
 ?>
@@ -23,6 +23,7 @@ $result = mysqli_query($con, $query);
 
                     </tr>
                     <?php
+                    //Ausgabe der Ergebnisse in einer Tabelle
                     while ($row = mysqli_fetch_assoc($result)) {
                         $id = $row['ID'];
                         $bild = $row['Bild'];
@@ -30,6 +31,8 @@ $result = mysqli_query($con, $query);
                         $preis = $row['Preis'];
                         $beschreibung = $row['Beschreibung'];
                         $verfuegbarkeit = $row['Stueck'];
+
+                        //Ausgabe der Produktdaten in Tabelle
                         ?>
                         <tr>
                             <td><img src="<?php echo $bild ?>" width="200"></td>
@@ -49,6 +52,7 @@ $result = mysqli_query($con, $query);
     </div>
 
     <script>
+        //dynamische Suche mit Ausgabe in einer Tabelle
         $(document).ready(function () {
             $('#search').keyup(function () {
                 search_table($(this).val());

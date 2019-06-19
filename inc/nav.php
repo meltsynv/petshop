@@ -10,19 +10,16 @@
     <div class="collapse navbar-collapse d-flex flex-row-reverse" id="navbarNav">
         <ul class="navbar-nav">
             <li>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" id="search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <form class="form-inline my-2 my-lg-0" method="post" action="php/searchArticle.php">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" name="searchLabel" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="userSearch">Search</button>
                 </form>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="produktübersichtHund.php">Produktübersicht</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Einkaufswagen</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="petshop/profil.php">Profil</a>
+                <a class="nav-link" href="profil.php">Profil</a>
             </li>
         </ul>
     </div>

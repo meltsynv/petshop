@@ -3,13 +3,16 @@ include "inc/head.php";
 include "inc/nav.php";
 include "inc/config.php";
 
+//Abfrage, welcher User eingeloggt ist
 session_start() ;
 if (isset($_SESSION['Username'])) {
     $user = $_SESSION['Username'];
 }
-$query1 = "SELECT * FROM kaeufe INNER JOIN produkte WHERE Username = '$user'";
-$result = mysqli_query($con, $query1);
-if ($row = mysqli_fetch_assoc($result)) {
+//DB-Abfrage nach gekauften Artikel von aktivem Nutzer
+$query3 = "SELECT * FROM kaeufe INNER JOIN produkte WHERE Username = '$user'";
+$result3 = mysqli_query($con, $query3);
+
+if ($row = mysqli_fetch_assoc($result3)) {
     $bild = $row['Bild'];
     $artikelName = $row['Name'];
     $datum = $row['Datum'];
@@ -28,12 +31,20 @@ if ($row = mysqli_fetch_assoc($result)) {
                     <th scope="col">Produkt</th>
                     <th scope="col">Preis</th>
                 </tr>
-                    <tr>
+                <?php
+                //Ausgabe der Ergebnisse
+                while ($row = mysqli_fetch_assoc($result3)) {
+                    $username = $row['Username'];
+                    $vorname = $row['Vorname'];
+                    $nachname = $row['Nachname'];
+                    $email = $row['Email'];
+                    ?>
+                <tr>
                     <td><img src="<?php echo $bild ?>" width="200"></td>
                     <td><?php echo $datum ?></td>
                     <td><?php echo $artikelName ?></td>
                     <td><?php echo $price ?></td>
-                    </tr><?php } ?>
+                </tr><?php }}?>
             </table>
         </div>
     </div>

@@ -7,6 +7,7 @@ session_start() ;
 if (isset($_SESSION['Username'])) {
     $user = $_SESSION['Username'];
 }
+//Zugriff auf die Login Daten des aktiven Nutzers
 $query1 = "SELECT * FROM user WHERE Username = '$user'";
 $result = mysqli_query($con, $query1);
 if ($row = mysqli_fetch_assoc($result)) {
@@ -31,6 +32,7 @@ if ($row = mysqli_fetch_assoc($result)) {
                     <th scope="col">Kommentar</th>
                 </tr>
                 <?php
+                //Auflistung der eigenen Bewertungen
                 $query2 = "SELECT * FROM profil WHERE Username = '$user'";
                 $result2= mysqli_query($con, $query2);
                 while ($row = mysqli_fetch_assoc($result2)) {

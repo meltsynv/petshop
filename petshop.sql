@@ -68,7 +68,7 @@ CREATE TABLE `produkte` (
 
 INSERT INTO `produkte` (`ID`, `Name`, `Preis`, `Stueck`, `Bild`, `Beschreibung`) VALUES
 (1, 'Leine', 15, 20, 'img/hundeleine1.jpg', 'Blaue Leine'),
-(2, 'Katzenleine', 13, 12, 'img/cat-1373903_640.jpg', 'Rote Katzenleine. 75%Baumwolle');
+(2, 'Katzenleine', 13, 12, 'img/geschirrKatze.jpg', 'Rote Katzenleine. 75%Baumwolle');
 
 -- --------------------------------------------------------
 

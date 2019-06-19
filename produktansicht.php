@@ -25,7 +25,7 @@ include 'inc/config.php';
                 <div class="d-flex flex-row bd-highlight pl-3 pt-3 mb-3">
                     <div class="row">
                         <div class="col pr-0 mr-0"><img src="<?php echo $bild ?>" alt="" width="400px"></div>
-                        <div class="col-5 pl-2 mr-0">
+                        <div class="col-4 pl-2 mr-0">
                             <h1><?php echo $name ?></h1><br><br>
                             <h5><?php echo $beschreibung ?></h5><br>
                             <h7><?php echo $stueck ?> Stück auf Lager</h7>
