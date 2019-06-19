@@ -45,6 +45,7 @@ include 'inc/config.php';
                         <th scope="col">Kommentar</th>
                         <?php
                         while ($row = mysqli_fetch_assoc($result2)) {
+                            $isBought = $row['isBought'];
                             $user = $row['User'];
                             $kommentar = $row['Kommentar'];
                             $note = $row['Note']; ?>
@@ -52,6 +53,7 @@ include 'inc/config.php';
                             <td><?php echo $user ?></td>
                             <td><?php echo $note ?></td>
                             <td><?php echo $kommentar ?></td>
+                            <td> <?php echo $isBought ?></td>
                         </tr><?php } ?>
                     </table>
                 </div>

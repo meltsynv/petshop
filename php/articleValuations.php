@@ -20,6 +20,8 @@ if (isset($_POST['commentBtn'])){
     $query2 = "INSERT INTO `profil` (`Username`, `Datum`, `Kommentar`, `Note`, `Artikel`) VALUES ('$user', CURRENT_TIMESTAMP, '$kommentar', '$note', '$id')";
     $result2 = mysqli_query($con, $query2);
 
+    // Die Bewertung wird markiert, wenn der Nutzer den Artikel gekauft hat
+    $update2 = mysqli_query($con, "UPDATE bewertungen SET isBought = 'wurde von Nutzer gekauft' WHERE ID = '$id'");
     header("location:../produktansicht.php?ID=$id");
 }
 else{
