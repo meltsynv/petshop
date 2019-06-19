@@ -4,9 +4,11 @@ include 'inc/config.php';
 
 
     $id = $_GET['ID'];
-    $query = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = '$id' AND bewertungen.ID = '$id'";
+    $query = "SELECT * FROM produkte WHERE produkte.ID = '$id'";
+    $query2 = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = '$id' AND bewertungen.ID = '$id'";
 
     $result = mysqli_query($con, $query);
+    $result2 = mysqli_query($con, $query2);
 
     if ($row = mysqli_fetch_assoc($result)) {
         $id = $_GET['ID'];
@@ -37,12 +39,12 @@ include 'inc/config.php';
                 </div>
                 <div class="col-12">
                     <table class="table table-striped">
-                        <thead><b>Bertungen für diesen Artikel:</b></thead>
+                        <thead><b>Bewertungen für diesen Artikel:</b></thead>
                         <th scope="col">User</th>
                         <th scope="col">Note</th>
                         <th scope="col">Kommentar</th>
                         <?php
-                        while ($row = mysqli_fetch_assoc($result)) {
+                        while ($row = mysqli_fetch_assoc($result2)) {
                             $user = $row['User'];
                             $kommentar = $row['Kommentar'];
                             $note = $row['Note']; ?>
@@ -59,7 +61,7 @@ include 'inc/config.php';
                     <b>Eigene Bewertung hinterlassen:</b><br><br>
                     Schulnote: <input name="Note" type="number" max="6.0" min="1.0" ><br>
                     <textarea name = 'Kommentar' cols = '40' rows = '3' placeholder="Ihr Kommentar..."></textarea ><br><br>
-                    <button class="btn btn-outline-success" type="submit" id="commentBtn" >Abschicken</button>
+                    <button class="btn btn-outline-success" type="submit" name="commentBtn" >Abschicken</button>
                 </form >
             </div>
         </div>
