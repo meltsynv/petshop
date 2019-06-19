@@ -3,7 +3,7 @@
 <?php
 include 'inc/config.php';
 
-$query = "SELECT * FROM produkte INNER JOIN bewertungen WHERE produkte.ID = bewertungen.ID ";
+$query = "SELECT * FROM produkte";
 
 $result = mysqli_query($con, $query);
 
@@ -30,7 +30,6 @@ $result = mysqli_query($con, $query);
                         $preis = $row['Preis'];
                         $beschreibung = $row['Beschreibung'];
                         $verfuegbarkeit = $row['Stueck'];
-                        $bewertung=  $row['Note'];
                         ?>
                         <tr>
                             <td><img src="<?php echo $bild ?>" width="200"></td>
@@ -38,14 +37,15 @@ $result = mysqli_query($con, $query);
                             <td><?php echo $preis ?></td>
                             <td><?php echo $beschreibung ?></td>
                             <td><?php echo $verfuegbarkeit ?></td>
-                            <td><?php echo $bewertung ?></td>
                             <td><form method="post" action="adminProduktbearbeiten.php?ID=<?php echo $id ?>"><button type="submit" name="updateProdukt">bearbeiten</button></form></td>
                         </tr>
                     <?php } ?>
                 </table>
             </div>
         </div>
-        <button type="button" id="NeuArtikel">Neuen Artikel hinzufügen</button>
+        <form action="artikelHinzufügen.php">
+            <input type="submit" value="Neuen Artikel hinzufügen">
+        </form>
     </div>
 
     <script>
