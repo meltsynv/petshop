@@ -1,13 +1,13 @@
 <?php include 'inc/head.php'?>
-<div class="justify-content-center">
+<div class="row justify-content-center">
     <form class="needs-validation" novalidate method="post" action="php/compareUser.php">
-        <div class="col-md-4 mb-3">
+        <div class="col">
             <label for="validationCustom01">E-Mail</label>
             <input type="email" class="form-control" id="validationCustom01" name="Email" placeholder="E-Mail Adresse" required>
             <div class="valid-feedback">Looks good!</div>
             <div class="invalid-feedback">Bitte eine E-Mail Adresse eingeben.</div>
         </div>
-        <div class="col-md-4 mb-3">
+        <div class="col">
             <label for="validationCustom02">Passwort</label>
             <input type="password" class="form-control" id="validationCustom02" name="Passwort" placeholder="Passwort" required>
             <div class="valid-feedback">Looks good!</div>
