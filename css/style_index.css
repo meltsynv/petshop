@@ -59,6 +59,32 @@ span.psw {
     padding-top: 16px;
 }
 
+/* canvas */
+.canvas-section{
+    position: relative;
+}
+
+.canvas-section .btn_download{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0);
+    border: 0px;
+}
+
+.canvas-section .btn_download i.fas.fa-download{
+    font-size: 26px;
+    color: #324246;
+}
+
+canvas#canvas{
+    width: 100%;
+    height: auto;
+    background-color: #9eb8be;
+    box-shadow: 1px 5px 20px rgba(0,0,0, 0.2);
+    border-radius: 10px;
+}
+
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
