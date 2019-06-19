@@ -21,7 +21,7 @@
                 <a class="nav-link" href="#">Einkaufswagen</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Profil</a>
+                <a class="nav-link" href="petshop/profil.php">Profil</a>
             </li>
         </ul>
     </div>

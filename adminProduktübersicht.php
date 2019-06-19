@@ -12,7 +12,7 @@ $result = mysqli_query($con, $query);
         <input type="text" name="search" id="search" class="form-control" placeholder="Nach Artikel suchen..."/>
         <div class="row">
             <div class="col-12">
-                <table class="table table-striped" id="uebersicht">
+                <table class="table table-striped" id="overview">
                     <tr>
                         <th scope="col">Bild</th>
                         <th scope="col">Name</th>
@@ -55,7 +55,7 @@ $result = mysqli_query($con, $query);
             });
 
             function search_table(value) {
-                $('#uebersicht tr').each(function () {
+                $('#overview tr').each(function () {
                     var found = 'false';
                     $(this).each(function () {
                         if ($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0) {

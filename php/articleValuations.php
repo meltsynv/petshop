@@ -1,33 +1,22 @@
 <?php
+include "../inc/config.php";
 
-error_reporting(E_ALL);
-// Zum Aufbau der Verbindung zur Datenbank
-define ( 'MYSQL_HOST',      'localhost' );
-define ( 'MYSQL_BENUTZER',  'root' );
-define ( 'MYSQL_KENNWORT',  '' );
-define ( 'MYSQL_DATENBANK', 'petshop' );
-
-$con = mysqli_connect (MYSQL_HOST, MYSQL_BENUTZER, MYSQL_KENNWORT, MYSQL_DATENBANK);
-
-if ($con){
-    //echo 'Verbindung erfolgreich: ';
-}else{
-    // hier sollte dann später dem Programmierer eine
-    // E-Mail mit dem Problem zukommen gelassen werden
-    die('keine Verbindung möglich: ' . mysqli_error());
+session_start() ;
+if (isset($_SESSION['Username'])) {
+    $user = $_SESSION['Username'];
 }
 
-
 if (isset($_POST['commentBtn'])){
-
     $kommentar = $_POST['Kommentar'];
     $note = $_POST['Note'];
     $id = $_GET['ID'];
 
-    $query = "INSERT INTO `bewertungen` (`ID`, `Kommentar`, `Note`, `Datum`) VALUES ('$id', '$kommentar', '$note', CURRENT_TIMESTAMP)";
+    $query = "INSERT INTO `bewertungen` (`ID`, `Kommentar`, `Note`, `Datum`, `User`) VALUES ('$id', '$kommentar', '$note', CURRENT_TIMESTAMP, '$user')";
+    $query2 = "INSERT INTO `profil` (`Username`, `Datum`, `Kommentar`, `Note`, `Artikel`) VALUES ('$user', CURRENT_TIMESTAMP, '$kommentar', '$note', '$id')";
 
     $result = mysqli_query($con, $query);
-    header("location:../produktansicht.php");
+    $result2 = mysqli_query($con, $query2);
+    header("location:../produktansicht.php?ID=$id");
 }
 else{
     echo "fail!";
