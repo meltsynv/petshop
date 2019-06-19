@@ -9,14 +9,14 @@ if (isset($_SESSION['Username'])) {
 }
 $query1 = "SELECT * FROM user WHERE Username = '$user'";
 $result = mysqli_query($con, $query1);
-if ($row = mysqli_fetch_assoc($result)){
+if ($row = mysqli_fetch_assoc($result)) {
     $vorname = $row['Vorname'];
     $nachname = $row['Nachname'];
 
 ?>
  <div class="pageContainer">
      <div class="container">
-         <h4>Guten Tag <?php echo $vorname," ", $nachname ?>!</h4>
+         <h4>Guten Tag <?php echo $vorname," ", $nachname ;}?>!</h4>
      </div>
      <div>
          <?php
@@ -24,15 +24,16 @@ if ($row = mysqli_fetch_assoc($result)){
          $result2= mysqli_query($con, $query2);
          while ($row = mysqli_fetch_assoc($result2)) {
              $user = $row['Username'];
+             $datum = $row['Datum'];
              $kommentar = $row['Kommentar'];
              $note = $row['Note'];
              $produktId = $row['Artikel'];
              ?>
              <tr>
              <td><?php echo $user ?></td>
+             <td><?php echo $datum ?></td>
              <td><?php echo $note ?></td>
              <td><?php echo $kommentar ?></td>
-             <td><?php echo $artikel ?></td>
              </tr><?php } ?>
      </div>
 
@@ -41,5 +42,5 @@ if ($row = mysqli_fetch_assoc($result)){
 
 
 <?php
-}
+
 include "inc/bottom.php";
