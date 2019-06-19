@@ -7,6 +7,10 @@ session_start() ;
 if (isset($_SESSION['Username'])) {
     $user = $_SESSION['Username'];
 }
+else{
+    header("location:login.php");
+
+}
 //Zugriff auf die Login Daten des aktiven Nutzers
 $query1 = "SELECT * FROM user WHERE Username = '$user'";
 $result = mysqli_query($con, $query1);
@@ -17,8 +21,13 @@ if ($row = mysqli_fetch_assoc($result)) {
 ?>
  <div class="pageContainer">
     <div class="row justify-content-center">
-        <div class="col-11">
-            <h4>Guten Tag <?php echo $vorname," ", $nachname ;}?>!</h4>
+        <div class="col-3">
+            <br><h4>Guten Tag <?php echo $vorname," ", $nachname ;}?>!</h4>
+        </div>
+        <div class="row align-items-end">
+            <form method="post" action="php/logout.php">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="logoutBtn">ausloggen</button>
+            </form>
         </div>
     </div>
      <div class="row justify-content-center">
@@ -76,7 +85,7 @@ if ($row = mysqli_fetch_assoc($result)) {
                     <td><img src="<?php echo $bild ?>" width="200"></td>
                     <td><?php echo $datum ?></td>
                     <td><?php echo $artikelName ?></td>
-                    <td><?php echo $price ?></td>
+                    <td><?php echo $price ?>€</td>
                     </tr><?php }?>
             </table>
         </div>

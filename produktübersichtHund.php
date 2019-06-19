@@ -36,7 +36,9 @@ $result = mysqli_query($con, $query);
                     <td><?php echo $preis ?></td>
                     <td><?php echo $beschreibung ?></td>
                     <td><?php echo $verfuegbarkeit ?></td>
-                    <td><form method="post" action="produktansicht.php?ID=<?php echo $id ?>"><button type="submit" name="showBtn">anzeigen</button></form></td>
+                    <td><form method="post" action="produktansicht.php?ID=<?php echo $id ?>">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="showBtn">anzeigen</button>
+                        </form></td>
                 </tr>
                     <?php } ?>
             </table>
