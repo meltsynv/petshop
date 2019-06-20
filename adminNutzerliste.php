@@ -1,5 +1,6 @@
-<?php include 'inc/head.php'?>
 <?php
+include "inc/head.php";
+include "inc/nav-2.php";
 include 'inc/config.php';
 
 //SQL-Abfrage der DB
@@ -15,6 +16,7 @@ $result = mysqli_query($con, $query);
             <div class="col-12">
                 <table class="table table-striped" id="overview">
                     <tr>
+                        <th scope="col">Username</th>
                         <th scope="col">Vorname</th>
                         <th scope="col">Nachname</th>
                         <th scope="col">Email</th>
@@ -29,6 +31,7 @@ $result = mysqli_query($con, $query);
                         $email = $row['Email'];
                         ?>
                         <tr>
+                            <td><?php echo $username ?></td>
                             <td><?php echo $vorname ?></td>
                             <td><?php echo $nachname ?></td>
                             <td><?php echo $email ?></td>

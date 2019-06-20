@@ -1,5 +1,5 @@
 <?php include 'inc/head.php'?>
-<?php include 'inc/nav.php'?>
+<?php include 'inc/nav-2.php'?>
 <?php
 include 'inc/config.php';
 

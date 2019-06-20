@@ -1,12 +1,11 @@
 <?php include "inc/head.php" ?>
-<?php include "inc/nav.php" ?>
+<?php include "inc/nav-2.php" ?>
     <div class="d-inline-flex p-2 flex-column align-content-end">
-        <div class="container">
-            <button type="button" name="btnNutzer" onclick="parent.location='adminNutzerliste.php'">Nutzer</button>
-            <button type="button" name="btnProdukte" onclick="parent.location='adminProduktübersicht.php'">Produkte
-            </button>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <?php include 'canvas.php';?>
+            </div>
         </div>
-        <?php include 'canvas.php';?>
     </div>
 
 <?php include "inc/bottom.php";

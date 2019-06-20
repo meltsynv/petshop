@@ -12,7 +12,7 @@
             <li>
                 <form class="form-inline my-2 my-lg-0" method="post" action="php/searchArticle.php">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" name="searchLabel" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="userSearch">Search</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="userSearch">Suchen</button>
                 </form>
             </li>
             <li class="nav-item">

@@ -67,7 +67,6 @@ include 'inc/config.php';
                     <label >Schulnote:</label>
                     <input name="Note" type="number" max="6.0" min="1.0" ><br>
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
                         <textarea class="form-control" name="Kommentar" id="exampleFormControlTextarea1" rows="3" placeholder="Ihr Kommentar..."></textarea>
                     </div>
                     <button class="btn btn-outline-success" type="submit" name="commentBtn" >Abschicken</button>
