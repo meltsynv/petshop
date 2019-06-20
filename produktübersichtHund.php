@@ -31,7 +31,7 @@ $result = mysqli_query($con, $query);
 
                 ?>
                 <tr>
-                    <td><img src="<?php echo $bild ?>"width="200"></td>
+                    <td><img src="img/<?php echo $bild ?>"width="200"></td>
                     <td><?php echo $articlename ?></td>
                     <td><?php echo $preis ?></td>
                     <td><?php echo $beschreibung ?></td>

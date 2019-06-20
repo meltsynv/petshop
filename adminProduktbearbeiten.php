@@ -24,7 +24,7 @@ if (isset($_POST['updateProdukt'])){
         <div class="row">
             <div class="d-flex flex-row bd-highlight pl-3 pt-3 mb-3">
                 <div class="row">
-                    <div class="col pr-0 mr-0"><img src="<?php echo $bild ?>" alt="" width="400px"></div>
+                    <div class="col pr-0 mr-0"><img src="img/<?php echo $bild ?>" alt="" width="400px"></div>
                     <div class="col-4 pl-2 mr-0">
                         <h1><?php echo $name ?></h1><br><br>
                         <h5><?php echo $beschreibung ?></h5><br>
@@ -33,7 +33,7 @@ if (isset($_POST['updateProdukt'])){
                     </div>
                 </div>
                 <div class="row ">
-                    <div class="col-12 pr-0 mr-0">
+                    <div class="col-10 pr-0 ml-5 mr-0">
                     <br><h3><?php echo $preis ?>€</h3><p>
                     <form method="post" action="php/removeArtikel.php?ID=<?php echo $id ?>">
                         <button type="submit" name="removeArticle">löschen</button>

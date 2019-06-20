@@ -82,7 +82,7 @@ if ($row = mysqli_fetch_assoc($result)) {
                     $price = $row['Preis'];
                     ?>
                     <tr>
-                    <td><img src="<?php echo $bild ?>" width="200"></td>
+                    <td><img src="img/<?php echo $bild ?>" width="200"></td>
                     <td><?php echo $datum ?></td>
                     <td><?php echo $artikelName ?></td>
                     <td><?php echo $price ?>€</td>

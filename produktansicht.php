@@ -24,7 +24,7 @@ include 'inc/config.php';
             <div class="row">
                 <div class="d-flex flex-row bd-highlight pl-3 pt-3 mb-3">
                     <div class="row">
-                        <div class="col pr-0 mr-0"><img src="<?php echo $bild ?>" alt="" width="400px"></div>
+                        <div class="col pr-0 mr-0"><img src="img/<?php echo $bild ?>" alt="" width="400px"></div>
                         <div class="col-4 pl-2 mr-0">
                             <h1><?php echo $name ?></h1><br><br>
                             <h5><?php echo $beschreibung ?></h5><br>
@@ -32,7 +32,7 @@ include 'inc/config.php';
 
                         </div>
                     </div>
-                    <div class="p-2 bd-highlight">
+                    <div class="p-2 ml-5 bd-highlight">
                         <br><h3><?php echo $preis ?>€</h3><p>
                         <form method="post" action="php/buyArticle.php?ID=<?php echo $id ?>&Verfuegbarkeit=<?php echo $stueck ?>">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="cartBtn">kaufen</button>
