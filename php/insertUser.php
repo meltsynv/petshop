@@ -12,6 +12,11 @@ if (isset($_POST['SubmitButton'])){
     $query  = "INSERT INTO `user` (Vorname, Nachname, Email, Username, Passwort) VALUES ('$forename', '$surname', '$email', '$username', '$password')";
     $result = mysqli_query($con, $query);
 
+    //Session für den eingeloggten User startet
+    session_start();
+    $_SESSION['Username'] = $username;
+    echo $_SESSION['Username'];
+
     header("location:../index.php");
 }
 else{
