@@ -41,26 +41,29 @@ if($row_3 = mysqli_fetch_assoc($result_3)){
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');
 
-    ctx.font = "55px Helvetica";
-    ctx.fillStyle = "#000000";
+    ctx.font = "55px Georgia";
+    ctx.fillStyle = "#04B431";
     ctx.textAlign = "center";
 
     ctx.moveTo(0, canvas.height / 2);
     ctx.textBaseline = "middle";
-    ctx.fillText(<?php echo $sum ?>, 150, canvas.height / 2 - 10);
+    ctx.fillText(<?php echo $sum ?>, 170, canvas.height / 2 - 15);
 
-    ctx.font = "30px Helvetica";
-    ctx.fillText('Anzahl der Produkte', 150, canvas.height / 2 + 45);
+    ctx.font = "30px Georgia";
+    ctx.fillText('Gesamtanzahl Produkte', 170, canvas.height / 2 + 55);
 
-    ctx.font = "55px Helvetica";
-    ctx.fillText(<?php echo $anzahl_nutzer ?>, canvas.width - 450, canvas.height / 2 - 10);
+    ctx.fillStyle = "#FF0000";
+    ctx.font = "55px Georgia";
+    ctx.fillText(<?php echo $anzahl_nutzer ?>, canvas.width - 410, canvas.height / 2 - 15);
 
-    ctx.font = "30px Helvetica";
-    ctx.fillText('Anzahl der Nutzer', canvas.width - 450, canvas.height / 2 + 45);
+    ctx.font = "30px Georgia";
+    ctx.fillText('Anzahl Nutzer', canvas.width - 410, canvas.height / 2 + 55);
 
-    ctx.font = "55px Helvetica";
-    ctx.fillText(<?php echo $anzahl_kaeufe ?>, canvas.width - 150, canvas.height / 2 - 10);
 
-    ctx.font = "30px Helvetica";
-    ctx.fillText('Anzahl der Verkäufe', canvas.width - 150, canvas.height / 2 + 45);
+    ctx.fillStyle = "#2E2EFE";
+    ctx.font = "55px Georgia";
+    ctx.fillText(<?php echo $anzahl_kaeufe ?>, canvas.width - 150, canvas.height / 2 - 15);
+
+    ctx.font = "30px Georgia";
+    ctx.fillText('Anzahl Verkäufe', canvas.width - 150, canvas.height / 2 + 55);
 </script>
