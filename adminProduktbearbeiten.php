@@ -40,7 +40,7 @@ if (isset($_POST['updateProdukt'])){
                     </form>
                     <form method = 'post' action = 'php/updateVerfügbarkeit.php?ID=<?php echo $id ?>' >
                         <b>Verfügbarkeit:</b><br><br>
-                        <input name="VerfuegbarkeitNeu" type="number" max="6.0" min="1.0" >
+                        <input name="VerfuegbarkeitNeu" type="number" max="6.0" min="0.0" >
                         <button type="submit" name="updateVerfuegbarkeit">OK</button>
                     </form ><br>
                     </div>
