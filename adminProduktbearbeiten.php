@@ -35,9 +35,11 @@ if (isset($_POST['updateProdukt'])){
                 <div class="row ">
                     <div class="col-10 pr-0 ml-5 mr-0">
                     <br><h3><?php echo $preis ?>€</h3><p>
+                            <!-- Button für Aktion: Artikel löschen -->
                     <form method="post" action="php/removeArtikel.php?ID=<?php echo $id ?>">
                         <button type="submit" name="removeArticle">löschen</button>
                     </form>
+            <!-- Input um die Verfügbarkeit zu aktualisieren-->
                     <form method = 'post' action = 'php/updateVerfügbarkeit.php?ID=<?php echo $id ?>' >
                         <b>Verfügbarkeit:</b><br><br>
                         <input name="VerfuegbarkeitNeu" type="number" max="6.0" min="0.0" >

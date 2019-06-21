@@ -46,34 +46,35 @@ $result = mysqli_query($con, $query);
                 </table>
             </div>
         </div>
-        <form action="artikelHinzufügen.php">
-            <input type="submit" value="Neuen Artikel hinzufügen">
-        </form>
-    </div>
+    <!-- Button für Aktion: Artikel hinzufügen-->
+    <form action="artikelHinzufügen.php">
+        <input type="submit" value="Neuen Artikel hinzufügen">
+    </form>
+</div>
 
-    <script>
-        //dynamische Suche mit Ausgabe in einer Tabelle
-        $(document).ready(function () {
-            $('#search').keyup(function () {
-                search_table($(this).val());
-            });
+<script>
+    //dynamische Suche mit Ausgabe in einer Tabelle
+    $(document).ready(function () {
+        $('#search').keyup(function () {
+            search_table($(this).val());
+        });
 
-            function search_table(value) {
-                $('#overview tr').each(function () {
-                    var found = 'false';
-                    $(this).each(function () {
-                        if ($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0) {
-                            found = 'true';
-                        }
-                    });
-                    if (found == 'true') {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
+        function search_table(value) {
+            $('#overview tr').each(function () {
+                var found = 'false';
+                $(this).each(function () {
+                    if ($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0) {
+                        found = 'true';
                     }
                 });
-            }
-        });
-    </script>
+                if (found == 'true') {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        }
+    });
+</script>
 
 <?php include 'inc/bottom.php'?>

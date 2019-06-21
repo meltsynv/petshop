@@ -1,5 +1,6 @@
 <?php include 'inc/head.php'?>
     <div class="container">
+        <!--Formular um ein neues Produkt hinzuzufügen -->
         <form class="needs-validation" novalidate action="php/insertArtikel.php" method="post">
             <div class="col-md-4 mb-3">
                 <label for="validationArtikel02">Name</label>

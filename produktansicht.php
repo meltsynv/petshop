@@ -39,6 +39,7 @@ include 'inc/config.php';
                         </form>
                     </div>
                 </div>
+                <!-- Ausgabe der Bewertungen -->
                 <div class="col-12">
                     <table class="table table-striped">
                         <thead><b>Bewertungen für diesen Artikel:</b></thead>
@@ -47,6 +48,7 @@ include 'inc/config.php';
                         <th scope="col">Kommentar</th>
                         <th scope="col"></th>
                         <?php
+
                         while ($row = mysqli_fetch_assoc($result2)) {
                             $isBought = $row['isBought'];
                             $user = $row['User'];
@@ -62,6 +64,7 @@ include 'inc/config.php';
                 </div>
             </div>
             <div>
+                <!-- Bewertung schreiben -->
                 <form method = 'post' action = 'php/articleValuations.php?ID=<?php echo $id ?>' >
                     <b>Eigene Bewertung hinterlassen:</b><br><br>
                     <label >Schulnote:</label>

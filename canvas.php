@@ -4,6 +4,7 @@ $query = 'SELECT produkte.Stueck FROM produkte';
 $result = mysqli_query($con, $query);
 
 $sum = 0;
+// Produkte zählen
 while ($row = mysqli_fetch_assoc($result)) {
     $stueck = $row['Stueck'];
 
@@ -12,6 +13,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 ?>
 
 <?php
+// Nutzer zählen
 $query_2 = 'SELECT COUNT(*) FROM user';
 $result_2 = mysqli_query($con, $query_2);
 
@@ -21,6 +23,7 @@ if($row_2 = mysqli_fetch_assoc($result_2)){
 ?>
 
 <?php
+// Verkäufe zählen
 $query_3 = 'SELECT COUNT(*) FROM kaeufe';
 $result_3 = mysqli_query($con, $query_3);
 
@@ -45,6 +48,7 @@ if($row_3 = mysqli_fetch_assoc($result_3)){
     ctx.fillStyle = "#04B431";
     ctx.textAlign = "center";
 
+    // Ausgabe Produkte
     ctx.moveTo(0, canvas.height / 2);
     ctx.textBaseline = "middle";
     ctx.fillText(<?php echo $sum ?>, 170, canvas.height / 2 - 15);
@@ -52,6 +56,7 @@ if($row_3 = mysqli_fetch_assoc($result_3)){
     ctx.font = "30px Georgia";
     ctx.fillText('Gesamtanzahl Produkte', 170, canvas.height / 2 + 55);
 
+    // Ausgabe Nutzer
     ctx.fillStyle = "#FF0000";
     ctx.font = "55px Georgia";
     ctx.fillText(<?php echo $anzahl_nutzer ?>, canvas.width - 410, canvas.height / 2 - 15);
@@ -59,7 +64,7 @@ if($row_3 = mysqli_fetch_assoc($result_3)){
     ctx.font = "30px Georgia";
     ctx.fillText('Anzahl Nutzer', canvas.width - 410, canvas.height / 2 + 55);
 
-
+    // Ausgabe Verkäufe
     ctx.fillStyle = "#2E2EFE";
     ctx.font = "55px Georgia";
     ctx.fillText(<?php echo $anzahl_kaeufe ?>, canvas.width - 150, canvas.height / 2 - 15);

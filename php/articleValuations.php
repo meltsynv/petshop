@@ -16,6 +16,7 @@ if (isset($_POST['commentBtn'])){
     $query = "INSERT INTO `bewertungen` (`ID`, `Kommentar`, `Note`, `Datum`, `User`) VALUES ('$id', '$kommentar', '$note', CURRENT_TIMESTAMP, '$user')";
     $result = mysqli_query($con, $query);
 
+    //Bewertung wird markiert, wenn der Artikel vorher vom Nutzer gekauft wurde
     if($result){
         $query = 'SELECT bewertungen.User, bewertungen.ID, bewertungen.isBought, kaeufe.Username, kaeufe.ArtikelID
                   FROM bewertungen, kaeufe

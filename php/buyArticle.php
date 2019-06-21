@@ -25,6 +25,7 @@ if (isset($_SESSION['Username'])) {
 
         else {
             ?>
+            <!-- Fehlermeldung, wenn der Artikel ausverkauft ist -->
             <div class="row">
                 <div class="col ml-3">
                     <?php $id = $_GET['ID'];

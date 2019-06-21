@@ -3,6 +3,7 @@
     <div class="d-inline-flex p-2 flex-column align-content-end">
         <div class="row justify-content-center">
             <div class="col-8">
+        <!-- Import vom Canvas -->
                 <?php include 'canvas.php';?>
             </div>
         </div>

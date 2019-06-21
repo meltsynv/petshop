@@ -11,6 +11,7 @@ $result = mysqli_query($con, $query);
 <div class="container">
     <div class="row">
         <div class="col-12">
+            <!-- Produkte auflisten -->
             <table class="table table-striped">
                 <tr>
                     <th scope="col">Bild</th>
